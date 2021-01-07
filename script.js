@@ -40,6 +40,11 @@ document.getElementById("container").innerHTML = "Hello!";
 
 document.getElementByClassName("footer").innerHTML = <div class="main"></div>;
 
+// are we creating?
+// create an item?
+
+// will adding code work?
+
 // do not think needs assignment
 
 
@@ -50,6 +55,8 @@ document.getElementByClassName("footer").innerHTML = <div class="main"></div>;
 let nodeToDelete = document.getElementByClassName("main");
 
 nodeToDelete.parentNode.removeChild(nodeToDelete);
+
+// main's parent is footer
 
 
 
@@ -69,12 +76,21 @@ let newElement = document.createElement("li");
 
 //9) Give the li the text "four".
 
-document.getElementById("li").innerHTML = "four";
+//document.getElementById("li").innerHTML = "four";
+
+// or maybe
+newElement.innerHTML = "four";
+
+// newelement.value = "four";
 
 
 //10) Append the li to the ul element.
 
 // how to append?
+
+let parentToAddTo = document.getElementsByTagName("ul")
+
+parentToAddTo.appendChild(newElement);  
 
 
 //12) Loop over all of the lis inside the ol tag and give them a background color of "green".
