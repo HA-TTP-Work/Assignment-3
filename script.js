@@ -1,111 +1,183 @@
-//Write the code necessary to do the following:
+
+
+// Javascript for the HTML code
+
 
 
 //1) Select the section with an id of container without using querySelector.
-let secttion1 = document.getElementById("container");
+
+let section1 = document.getElementById('container');
+
+console.log(section1);
+
 
 
 //2) Select the section with an id of container using querySelector.
 
-let section2 = document.querySelector("container");
+const section2 = document.querySelector('#container');
+
+console.log(section2);
+
+
+
+// need #?
+
+// what does query selevtor do?
+// searches for elements
+
+
 
 
 
 //3) Select all of the list items with a class of "second".
 
-let secondList = document.getElemenstbyClassName("second")
 
+
+//let secondList = document.getElementsByClassName("second");
+// both work
+
+let secondList = document.querySelector("second");
+
+console.log(secondList);
+
+
+// maybe use const
 // convert to array maybe?
+
 
 
 //4) Select a list item with a class of third, but only the list item inside of the ol tag.
 
-let thirdOlList = document.getElementsByTagName("ol").getElemenstbyClassName("third")
 
-// maybe break up into 2 lines?
-// convert to array maybe?
-// can do either first I think
+let listItem = document.querySelector('#container ol .third');
+
+
+console.log(listItem);
+
+//let thirdOlList = document.getElementsByTagName("ol").getElementsByClassName("third");
+// does not work
+// maybe cannot chain
+
+// maybe need const
+
+
 
 
 
 //5) Give the section with an id of container the text "Hello!".
 
 
-document.getElementById("container").innerHTML = "Hello!";
-// any tags?
-// I do not think it needs assignment
+container.innerHTML="Hello!"+container.innerHTML;
+
+// maybe because I earse the other children the other way?
+
+// for some reason need to append
+// if I do not the code breaks
+
+// add the old text?
+
+// access container directly?
+
+
+//let check1 = document.getElementById("container").innerHTML = "Hello!";
+// does not work
+
+
+
 
 
 //6) Add the class main to the div with a class of footer.
 
-document.getElementByClassName("footer").innerHTML = <div class="main"></div>;
 
-// are we creating?
-// create an item?
+let footer = document.querySelector('.footer');
 
-// will adding code work?
 
-// do not think needs assignment
+
+footer.classList.add("main");
+
+
+
+console.log(footer);
+
+
 
 
 
 
 //7) Remove the class main on the div with a class of footer.
 
-let nodeToDelete = document.getElementByClassName("main");
 
-nodeToDelete.parentNode.removeChild(nodeToDelete);
 
-// main's parent is footer
+footer.classList.remove("main");
+
+
+
+console.log(footer);
+
 
 
 
 
 //8) Create a new li element.
 
-let newElement = document.createElement("li");
-
-// create a list item?
 
 
-// need to create it
+let newElement = document.createElement('li');
 
-// <li class="new">one</li>
-// maybe this
-// where to add it?
+console.log(newElement);
+
+
+
+
 
 //9) Give the li the text "four".
 
-//document.getElementById("li").innerHTML = "four";
 
-// or maybe
-newElement.innerHTML = "four";
+newElement.innerHTML="four";
 
-// newelement.value = "four";
+
+console.log(newElement);
+
+
+console.log(newElement.innerText);
+
+
+
 
 
 //10) Append the li to the ul element.
 
-// how to append?
 
-let parentToAddTo = document.getElementsByTagName("ul")
+let parentN = document.querySelector('ul');
 
-parentToAddTo.appendChild(newElement);  
+
+
+parentN.appendChild(newElement);
+
+
+
+
 
 
 //12) Loop over all of the lis inside the ol tag and give them a background color of "green".
 
-let childList = document.getElementsByTagName("ol")
 
 
-for (child in childList) {
-     
-     child.style.backgroundColor = "green"
-     
-     
-     
-     
-     }
+let loopList = document.querySelector('ol')
+
+
+let valuesToChange = loopList.getElementsByTagName("li");
+
+
+for (let i = 0; i < valuesToChange.length; i++) {
+
+
+  valuesToChange[i].style.backgroundColor = "green";
+
+
+
+}
+
 
 
 
@@ -113,9 +185,10 @@ for (child in childList) {
 
 //13) Remove the div with a class of footer.
 
-let divToDelete = document.getElementByClassName("footer");
 
-divToDelete.parentNode.removeChild(divToDelete);
+footer.parentNode.removeChild(footer);
+// use the hack
 
+// maybe try printing to show null
 
-
+console.log(footer);
