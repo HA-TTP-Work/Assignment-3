@@ -100,7 +100,9 @@ footer.classList.add("main");
 // both seem to work
 // classes usually need . before them when you search
 
-console.log(footer);
+console.log(footer.classList);
+
+//console.log(footer);
 
 // why is main not printed here?
 
@@ -127,10 +129,12 @@ footer.classList.remove("main");
 
 
 
-console.log(footer);
+console.log(footer.classList);
 
+//console.log(footer);
 
-
+// need to be specific when requesting data from the console and browser
+// will give you the final state and not the current state otherwise.
 
 
 
@@ -139,7 +143,9 @@ console.log(footer);
 
 let newElement = document.createElement("li");
 
-console.log(newElement);
+console.log(newElement.innerHTML);
+
+//console.log(newElement);
 
 // when I print it here
 // four is displayed
@@ -259,7 +265,7 @@ container.innerHTML = "Hello!" + container.innerHTML;
 
 //let check1 = document.getElementById("container").innerHTML = "Hello!";
 
-// this actually does work it causes an error when comined with
+// this actually does work it causes an error when combined with
 
 // prompt 10 because this deletes something we need in that prompt
 
